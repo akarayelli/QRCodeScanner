@@ -156,7 +156,7 @@ public struct CodeScannerView: UIViewControllerRepresentable {
                                                    name: Notification.Name("UIDeviceOrientationDidChangeNotification"),
                                                    object: nil)
 
-            view.backgroundColor = UIColor.black
+            view.backgroundColor = UIColor(named: "Color1")
             captureSession = AVCaptureSession()
 
             guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }

@@ -18,12 +18,14 @@ class Constants {
     
     
     struct DateFormat {
-        static let dd_mm_yyyy_hh_ss = "dd.MM.YYYY HH:ss"
+        static let dd_mm_yyyy_hh_ss = "dd.MM.YYYY"
     }
     
     struct Fonts{
         static let ExtraBold = "Nunito-ExtraBold"
         static let Regular = "Nunito-Regular"
+        static let Light = "Nunito-Light"
+
     }
 
     struct Colors{

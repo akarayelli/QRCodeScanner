@@ -11,7 +11,7 @@ import SwiftUI
 struct ScannerView: View{
     
     @State var scannedObject: ScannedObject?
-
+    
     @ObservedObject var scannerViewModel = ScannerViewModel()
     
     
@@ -19,7 +19,7 @@ struct ScannerView: View{
         
         NavigationView {
             
-            VStack(spacing: 10) {
+            VStack(spacing: 0) {
                 
                 if self.scannedObject != nil {
                     
@@ -33,7 +33,7 @@ struct ScannerView: View{
                 }
                 
             }
-            .navigationBarTitle((self.scannedObject == nil) ? "view.scanner.scanning" : "view.scanner.scanning.result")
+            .navigationBarTitle((self.scannedObject == nil) ? "view.scanner.scanning" : "view.scanner.scanning.result", displayMode: .inline)
         }
         
     }
@@ -42,6 +42,20 @@ struct ScannerView: View{
     var scannerSheet : some View {
         
         ZStack{
+            
+            ZStack(alignment: .top) {
+                Color.clear
+                Text("view.scanner.scanning.info")
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .foregroundColor(Color.white)
+                    .font(Font.custom(Constants.Fonts.ExtraBold, size: 16))
+                    .minimumScaleFactor(0.5)
+                    .multilineTextAlignment(.center)
+                
+            }.zIndex(40)
+                .padding(20)
+            
+            
             
             
             if self.scannerViewModel.flashOn{
@@ -64,17 +78,17 @@ struct ScannerView: View{
                     .onTapGesture {
                         print("Flash is OFF")
                         self.scannerViewModel.toggleTorch(on: true)
-        
+                        
                 }
             }
             
-
-            Image("frame")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 200,height:200)
-                .zIndex(10)
-            
+            GeometryReader { metrics in
+                Image("frame")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: metrics.size.width * 0.7 ,height: metrics.size.width * 0.7)
+                
+            }.zIndex(10)
             
             CodeScannerView(
                 codeTypes: [.qr],

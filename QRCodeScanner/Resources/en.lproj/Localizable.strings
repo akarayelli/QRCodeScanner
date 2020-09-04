@@ -21,6 +21,9 @@
 //SCANNER VIEW
 "view.scanner.scanning" = "Scanning...";
 "view.scanner.scanning.result" = "Scanning Result";
+"view.scanner.scanning.info" = "Align the QR code within the frame to scan";
+"view.scanner.scanning.result.info" = "You can copy the QR information or easily share it with the application you want.";
+"view.scanner.scanning.result.empty" = "No data found after code scanning";
 
 
 //RECENT VIEW

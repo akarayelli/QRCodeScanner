@@ -24,9 +24,10 @@
 	<string>Please allow to scan code</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Nunito-ExtraBoldItalic.tff</string>
-		<string>Nunito-ExtraBold.tff</string>
-		<string>Nunito-Regular.tff</string>
+		<string>Nunito-ExtraBoldItalic.ttf</string>
+		<string>Nunito-ExtraBold.ttf</string>
+		<string>Nunito-Regular.ttf</string>
+		<string>Nunito-Light.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
