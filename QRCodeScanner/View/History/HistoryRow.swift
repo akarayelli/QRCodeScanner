@@ -28,7 +28,7 @@ struct HistoryRow: View {
             Text(scannedObject!.data)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(Color.white)
-                .font(Font.custom("Nunito-Regular", size: 14))
+                .font(Font.custom(Constants.Fonts.Regular, size: 14))
             
             
             
@@ -40,7 +40,7 @@ struct HistoryRow: View {
                     let pasteboard = UIPasteboard.general
                     pasteboard.string = self.scannedObject?.data
                     
-                    self.alertMsg = "Text copied to clipboard!"
+                    self.alertMsg = "view.alert.msg.copy.success".localized
                     self.showingAlert = true
                     
             }
@@ -53,10 +53,10 @@ struct HistoryRow: View {
             
             
         }.frame(height: 60)
-            .background(Color("Color2"))
+            .background(Constants.Colors.Main)
             .cornerRadius(15)
             .alert(isPresented: $showingAlert){
-                Alert(title: Text("Success"), message: Text(self.alertMsg), dismissButton: .default(Text("OK")))
+                Alert(title: Text("view.alert.title.success"), message: Text(self.alertMsg), dismissButton: .default(Text("ok")))
         }
         
         return stack

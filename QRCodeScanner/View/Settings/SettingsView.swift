@@ -14,6 +14,7 @@ struct SettingsView: View{
 
     
     init() {
+        
         if #available(iOS 14.0, *) {
         } else {
             UITableView.appearance().tableFooterView = UIView()
@@ -30,49 +31,49 @@ struct SettingsView: View{
         
         let view = VStack{
             
-            Text("Settings")
+            Text("view.title.settings")
                 .frame(maxWidth: .infinity)
                 .frame(height: 80)
-                .foregroundColor(Color("Color3"))
-                .font(Font.custom("Nunito-ExtraBold", size: 20))
-            
+                .foregroundColor(Constants.Colors.Blackish)
+                .font(Font.custom(Constants.Fonts.ExtraBold, size: 20))
+
             
             List {
-                Section(header: Text("Important tasks").font(Font.custom("Nunito-ExtraBold", size: 20))) {
+                Section(header: Text("view.settings.section.tasks").font(Font.custom(Constants.Fonts.ExtraBold, size: 20))) {
                     
-                    Toggle("Vibrate", isOn: $settingsViewModel.vibrate)
+                    Toggle("view.settings.section.tasks.vibrate", isOn: $settingsViewModel.vibrate)
                         .onTapGesture {
                             self.settingsViewModel.toggleVibrate()
                     }
                     
-                    Toggle("Beep Sound", isOn: $settingsViewModel.beepSound)
+                    Toggle("view.settings.section.tasks.play.sound", isOn: $settingsViewModel.beepSound)
                         .onTapGesture {
                             self.settingsViewModel.toggleBeepSound()
                     }
                     
-                    Toggle("Copy to Clipboard", isOn: $settingsViewModel.copyResultToClipboard)
+                    Toggle("view.settings.section.tasks.copy.clipboard", isOn: $settingsViewModel.copyResultToClipboard)
                         .onTapGesture {
                             self.settingsViewModel.toggleCopyResultToClipboard()
                     }
                     
-                    Toggle("Scan & Browse If URL", isOn: $settingsViewModel.scanAndBrowser)
+                    Toggle("view.settings.section.tasks.scan.browse", isOn: $settingsViewModel.scanAndBrowser)
                         .onTapGesture {
                             self.settingsViewModel.toggleScanAndBrowser()
                     }
                     
-                    Toggle("Save to History", isOn: $settingsViewModel.saveToHistory)
+                    Toggle("view.settings.section.tasks.save.history", isOn: $settingsViewModel.saveToHistory)
                         .onTapGesture {
                             self.settingsViewModel.toggleSaveToHistory()
                     }
                     
-                    Toggle("Remove Duplicate Results", isOn: $settingsViewModel.disableDuplicates)
+                    Toggle("view.settings.section.tasks.remove.duplicate", isOn: $settingsViewModel.disableDuplicates)
                         .onTapGesture {
                             self.settingsViewModel.toggleDisableDuplicates()
                     }
-                }.font(Font.custom("Nunito-Regular", size: 16))
+                }.font(Font.custom(Constants.Fonts.Regular, size: 16))
                 .padding(6)
                 
-                Section(header: Text("Feedback").font(Font.custom("Nunito-ExtraBold", size: 20))) {
+                Section(header: Text("view.settings.section.feedback").font(Font.custom(Constants.Fonts.ExtraBold, size: 20))) {
                     ForEach(rowData) { data in
                         HStack{
                             Image(data.icon).padding(10)
@@ -80,7 +81,7 @@ struct SettingsView: View{
                             Text(data.text)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .foregroundColor(Color.white)
-                                .font(Font.custom("Nunito-Regular", size: 16))
+                                .font(Font.custom(Constants.Fonts.Regular, size: 16))
                             
                             Spacer()
                             
@@ -104,7 +105,7 @@ struct SettingsView: View{
                             
                         }
                         .frame(height: 60)
-                        .background(Color("Color2"))
+                        .background(Constants.Colors.Main)
                         .cornerRadius(15)
                     }
                 }

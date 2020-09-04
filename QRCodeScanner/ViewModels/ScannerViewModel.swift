@@ -24,7 +24,6 @@ class ScannerViewModel: ObservableObject {
      */
     func addToRecentList(scannedObject: ScannedObject, removeDuplicate: Bool){
             
-        
         if let historyList = Defaults.historyList {
             
             if removeDuplicate && (historyList.filter{$0.data == scannedObject.data}.count > 0){

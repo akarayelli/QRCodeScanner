@@ -35,7 +35,6 @@ class HistoryViewModel: ObservableObject {
     
 
     
-    
     /**
      Deletes recent item
      

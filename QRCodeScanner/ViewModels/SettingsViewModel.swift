@@ -21,31 +21,41 @@ class SettingsViewModel: ObservableObject {
     @Published var disableDuplicates: Bool = Defaults.disableDuplicates
 
 
+    //Toggles Vibrate Settings
     func toggleVibrate(){
         Defaults.vibrate = !vibrate
         self.vibrate = !vibrate
     }
     
+    
+    //Toggles Beep Sound Settings
     func toggleBeepSound(){
         Defaults.beepSound = !beepSound
         self.beepSound = !beepSound
     }
     
+    //Toggles Copy Result by Default Settings
     func toggleCopyResultToClipboard(){
         Defaults.copyResultToClipboard = !copyResultToClipboard
         self.copyResultToClipboard = !copyResultToClipboard
     }
+
     
+    //Toggles Scan&Browse Settings
     func toggleScanAndBrowser(){
         Defaults.scanAndBrowser = !scanAndBrowser
         self.scanAndBrowser = !scanAndBrowser
     }
+
     
+    //Toggles Save to History Settings
     func toggleSaveToHistory(){
         Defaults.saveToHistory = !saveToHistory
         self.saveToHistory = !saveToHistory
     }
+
     
+    //Toggles Disable Duplicates Settings
     func toggleDisableDuplicates(){
          Defaults.disableDuplicates = !disableDuplicates
          self.disableDuplicates = !disableDuplicates

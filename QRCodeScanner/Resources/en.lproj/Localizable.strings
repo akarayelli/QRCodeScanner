@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  QRCodeScanner
+
+  Created by Alican Karayelli on 4.09.2020.
+  Copyright © 2020 Karayelli Apps. All rights reserved.
+*/
+
+//GENERAL
+"ok" = "OK";
+"view.alert.title.success" = "Success";
+"view.alert.msg.copy.success" = "Text copied to clipboard!";
+
+
+
+//TAB VIEW
+"tab.title.recent" = "Recent";
+"tab.title.scan" = "Scan";
+"tab.title.settings" = "Settings";
+
+//SCANNER VIEW
+"view.scanner.scanning" = "Scanning...";
+"view.scanner.scanning.result" = "Scanning Result";
+
+
+//RECENT VIEW
+"view.title.recent" = "Recent Scanned Codes";
+"view.title.settings" = "Settings";
+
+
+//SETTINGS VIEW
+"view.settings.section.tasks" = "Scanner";
+"view.settings.section.feedback" = "Feedback";
+"view.settings.section.tasks.vibrate" = "Vibrate";
+"view.settings.section.tasks.play.sound" = "Play Sound";
+"view.settings.section.tasks.copy.clipboard" = "Copy to Clipboard";
+"view.settings.section.tasks.scan.browse" = "Scan & Browse if URL";
+"view.settings.section.tasks.remove.duplicate" = "Remove Duplicate Results";
+"view.settings.section.tasks.save.history" = "Save to History";

@@ -20,23 +20,23 @@ struct ContentView: View {
             HistoryView()
                 .tabItem{
                     Image("history")
-                    Text("Recent")
+                    Text("tab.title.recent")
             }.tag(1)
             
             
             ScannerView()
                 .tabItem{
                     Image("scan")
-                    Text("Scan")
+                    Text("tab.title.scan")
             }.tag(2)
             
             SettingsView()
                 .tabItem{
                     Image("settings")
-                    Text("Settings")
+                    Text("tab.title.settings")
             }.tag(3)
         }
-        .accentColor(Color("Color2"))
+        .accentColor(Constants.Colors.Main)
         
     }
 }

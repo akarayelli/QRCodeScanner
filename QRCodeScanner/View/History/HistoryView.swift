@@ -10,8 +10,11 @@ import SwiftUI
 
 struct HistoryView: View{
     
-    
+    @ObservedObject var historyViewModel = HistoryViewModel()
+
+
     init() {
+        
         if #available(iOS 14.0, *) {
             // iOS 14 doesn't have extra separators below the list by default.
         } else {
@@ -19,30 +22,21 @@ struct HistoryView: View{
             UITableView.appearance().tableFooterView = UIView()
         }
 
-        // To remove all separators including the actual ones:
         UITableView.appearance().separatorStyle = .none
     }
     
-    
-    @ObservedObject var historyViewModel = HistoryViewModel()
 
     
     var body: some View{
-        
-        /*
-        let rowData: [ScannedObject] = [ScannedObject(data: "Alican", scanDate: Date().toString(format: Constants.DateFormat.dd_mm_yyyy_hh_ss), type: .url),
-                                        ScannedObject(data: "Velican", scanDate: Date().toString(format: Constants.DateFormat.dd_mm_yyyy_hh_ss), type: .url),
-                                        ScannedObject(data: "Delican", scanDate: Date().toString(format: Constants.DateFormat.dd_mm_yyyy_hh_ss), type: .url)
-        ]
-        */
+
         
         let view = VStack{
             
-            Text("Recent Scanned Codes")
+            Text("view.title.recent")
                 .frame(maxWidth: .infinity)
                 .frame(height: 80)
-                .foregroundColor(Color("Color3"))
-                .font(Font.custom("Nunito-ExtraBold", size: 20))
+                .foregroundColor(Constants.Colors.Blackish)
+                .font(Font.custom(Constants.Fonts.ExtraBold, size: 20))
                     
 
             List(historyViewModel.recentList) { data in

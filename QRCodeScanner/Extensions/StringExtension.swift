@@ -10,6 +10,11 @@ import SwiftUI
 
 extension String{
     
+    var localized: String {
+        return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
+    }
+    
+    
     func verifyUrl() -> Bool {
         if let url = NSURL(string: self) {
             return UIApplication.shared.canOpenURL(url as URL)
@@ -19,7 +24,7 @@ extension String{
     }
     
     
-    
+
     func actionSheet() {
         guard let data = URL(string: self) else { return }
         let av = UIActivityViewController(activityItems: [data], applicationActivities: nil)

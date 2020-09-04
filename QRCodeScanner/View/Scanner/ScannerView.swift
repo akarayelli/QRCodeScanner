@@ -33,7 +33,7 @@ struct ScannerView: View{
                 }
                 
             }
-            .navigationBarTitle((self.scannedObject == nil) ? "Scanning..." : "Scanning Result")
+            .navigationBarTitle((self.scannedObject == nil) ? "view.scanner.scanning" : "view.scanner.scanning.result")
         }
         
     }

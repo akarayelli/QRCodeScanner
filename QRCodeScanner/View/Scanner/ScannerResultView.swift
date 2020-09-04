@@ -39,7 +39,7 @@ struct ScannerResultView: View {
             Text(scannedObject.scanDate!)
                 .frame(maxWidth: .infinity)
                 .foregroundColor(Color.white)
-                .font(Font.custom("Nunito-ExtraBold", size: 15))
+                .font(Font.custom(Constants.Fonts.ExtraBold, size: 15))
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
             
             
@@ -50,7 +50,7 @@ struct ScannerResultView: View {
             Text(scannedObject.data)
                 .frame(maxWidth: .infinity)
                 .foregroundColor(Color.white)
-                .font(Font.custom("Nunito-Regular", size: 16))
+                .font(Font.custom(Constants.Fonts.Regular, size: 16))
                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 20))
                 .minimumScaleFactor(0.5)
                 .onTapGesture {
@@ -77,17 +77,17 @@ struct ScannerResultView: View {
                         let pasteboard = UIPasteboard.general
                         pasteboard.string = self.scannedObject.data
                         
-                        self.alertMsg = "Text copied to clipboard!"
+                        self.alertMsg = "view.alert.msg.copy.success".localized
                         self.showingAlert = true
                 }
             }.padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
             
 
-        }.background(Color("Color2"))
+        }.background(Constants.Colors.Main)
             .cornerRadius(20)
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
             .alert(isPresented: $showingAlert){
-                Alert(title: Text("Success"), message: Text(self.alertMsg), dismissButton: .default(Text("OK")))
+                Alert(title: Text("view.alert.title.success"), message: Text(self.alertMsg), dismissButton: .default(Text("ok")))
                 
         }
         .onAppear(){
