@@ -16,6 +16,7 @@
 //TAB VIEW
 "tab.title.recent" = "Recent";
 "tab.title.scan" = "Scan";
+"tab.title.generate" = "Generate";
 "tab.title.settings" = "Settings";
 
 //SCANNER VIEW
@@ -26,8 +27,16 @@
 "view.scanner.scanning.result.empty" = "No data found after code scanning";
 
 
+////GENERATE VIEW
+"view.generator.info" = "You can create your QR code instantly by entering the text you want in the field below.";
+"view.generator.info.share" = "You can tap the code to share it.";
+
+"view.generator.input.placeholder" = "Text to Generate";
+"view.generator.button.generate" ="Generate";
+
+
 //RECENT VIEW
-"view.title.recent" = "Recent Scanned Codes";
+"view.title.recent" = "Recent";
 "view.title.settings" = "Settings";
 
 

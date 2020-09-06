@@ -30,24 +30,21 @@ struct HistoryView: View{
     var body: some View{
 
         
-        let view = VStack{
-            
-            Text("view.title.recent")
-                .frame(maxWidth: .infinity)
-                .frame(height: 80)
-                .foregroundColor(Constants.Colors.Blackish)
-                .font(Font.custom(Constants.Fonts.ExtraBold, size: 20))
-                    
+        NavigationView {
+           
+            VStack{
 
-            List(historyViewModel.recentList) { data in
-                HistoryRow(scannedObject: data, historyViewModel: self.historyViewModel)
+                List(historyViewModel.recentList) { data in
+                    HistoryRow(scannedObject: data, historyViewModel: self.historyViewModel)
+                }
+                
+            }.onAppear{
+                self.historyViewModel.fetchRecentList()
             }
+        .navigationBarTitle("view.title.recent")
             
-        }.onAppear{
-            self.historyViewModel.fetchRecentList()
         }
-        
-        return view
+
         
     }
 }

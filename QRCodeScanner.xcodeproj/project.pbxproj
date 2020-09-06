@@ -39,6 +39,7 @@
 		AA9D64D325026A6D00F01F9E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA9D64D525026A6D00F01F9E /* Localizable.strings */; };
 		AAA2EC6A24FFC1BF008F8AFD /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2EC6924FFC1BF008F8AFD /* SettingsModel.swift */; };
 		AAA2EC6C24FFE46A008F8AFD /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2EC6B24FFE46A008F8AFD /* HistoryViewModel.swift */; };
+		AAA4B2CF2505527C005BA738 /* GenerateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4B2CE2505527C005BA738 /* GenerateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		AA9D64D425026A6D00F01F9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AAA2EC6924FFC1BF008F8AFD /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		AAA2EC6B24FFE46A008F8AFD /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		AAA4B2CE2505527C005BA738 /* GenerateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				AA26667524FE338B00F6FF76 /* Settings */,
+				AAA4B2CD2505526C005BA738 /* Generate */,
 				AA26667424FE338600F6FF76 /* Scanner */,
 				AA26667324FE337E00F6FF76 /* History */,
 				AA26665124FD1FF000F6FF76 /* ContentView.swift */,
@@ -238,6 +241,14 @@
 				AA4646DC24FF8D02004955BE /* CodeScanner.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		AAA4B2CD2505526C005BA738 /* Generate */ = {
+			isa = PBXGroup;
+			children = (
+				AAA4B2CE2505527C005BA738 /* GenerateView.swift */,
+			);
+			path = Generate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +352,7 @@
 				AA26667924FE33A500F6FF76 /* HistoryView.swift in Sources */,
 				AAA2EC6C24FFE46A008F8AFD /* HistoryViewModel.swift in Sources */,
 				AA9D64CE2502547E00F01F9E /* SettingsViewModel.swift in Sources */,
+				AAA4B2CF2505527C005BA738 /* GenerateView.swift in Sources */,
 				AA26668124FE3DB600F6FF76 /* ScannerView.swift in Sources */,
 				AA26665224FD1FF000F6FF76 /* ContentView.swift in Sources */,
 				AA26667F24FE355700F6FF76 /* DefaultsKeys.swift in Sources */,
@@ -490,7 +502,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"QRCodeScanner/Preview Content\"";
 				DEVELOPMENT_TEAM = 75C2X73JT4;
 				ENABLE_PREVIEWS = YES;
@@ -513,7 +525,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"QRCodeScanner/Preview Content\"";
 				DEVELOPMENT_TEAM = 75C2X73JT4;
 				ENABLE_PREVIEWS = YES;

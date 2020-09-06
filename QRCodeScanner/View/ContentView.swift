@@ -30,11 +30,18 @@ struct ContentView: View {
                     Text("tab.title.scan")
             }.tag(2)
             
+            GenerateView()
+                .tabItem{
+                    Image("generate_qr")
+                    Text("tab.title.generate")
+            }.tag(3)
+            
+            
             SettingsView()
                 .tabItem{
                     Image("settings")
                     Text("tab.title.settings")
-            }.tag(3)
+            }.tag(4)
         }
         .accentColor(Constants.Colors.Main)
         
