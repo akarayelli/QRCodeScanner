@@ -41,6 +41,7 @@
 		AAA2EC6C24FFE46A008F8AFD /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2EC6B24FFE46A008F8AFD /* HistoryViewModel.swift */; };
 		AAA4B2CF2505527C005BA738 /* GenerateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4B2CE2505527C005BA738 /* GenerateView.swift */; };
 		AAC1204A2509216E00F7C4B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAC120492509216E00F7C4B1 /* GoogleService-Info.plist */; };
+		AAC12050250F629F00F7C4B1 /* ShareActivityItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1204F250F629F00F7C4B1 /* ShareActivityItemSource.swift */; };
 		EEF51D5AB91F725BF870B156 /* Pods_QRCodeScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16943832E6C24E6F3679D22C /* Pods_QRCodeScanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		AAA2EC6B24FFE46A008F8AFD /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		AAA4B2CE2505527C005BA738 /* GenerateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateView.swift; sourceTree = "<group>"; };
 		AAC120492509216E00F7C4B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AAC1204F250F629F00F7C4B1 /* ShareActivityItemSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareActivityItemSource.swift; sourceTree = "<group>"; };
 		B707D66FDE9A0A21DD26A2A8 /* Pods-QRCodeScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRCodeScanner.debug.xcconfig"; path = "Target Support Files/Pods-QRCodeScanner/Pods-QRCodeScanner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -266,6 +268,7 @@
 			children = (
 				AA4646D824FF8171004955BE /* Constants.swift */,
 				AA4646DC24FF8D02004955BE /* CodeScanner.swift */,
+				AAC1204F250F629F00F7C4B1 /* ShareActivityItemSource.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				AA26666624FD468800F6FF76 /* ScannedObject.swift in Sources */,
 				AA26665024FD1FF000F6FF76 /* SceneDelegate.swift in Sources */,
 				AA26667924FE33A500F6FF76 /* HistoryView.swift in Sources */,
+				AAC12050250F629F00F7C4B1 /* ShareActivityItemSource.swift in Sources */,
 				AAA2EC6C24FFE46A008F8AFD /* HistoryViewModel.swift in Sources */,
 				AA9D64CE2502547E00F01F9E /* SettingsViewModel.swift in Sources */,
 				AAA4B2CF2505527C005BA738 /* GenerateView.swift in Sources */,

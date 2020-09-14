@@ -12,8 +12,10 @@ import LinkPresentation
 
 struct GenerateView: View {
     
-    @State private var data = "Enter text to generate"
+    @State private var data = ""
     @State private var uiImage: UIImage? = nil
+    @State private var image: Image?
+    @State private var showShareSheet = false
 
     
     let context = CIContext()
@@ -29,19 +31,17 @@ struct GenerateView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
                     .foregroundColor(Constants.Colors.Blackish)
                     .font(Font.custom(Constants.Fonts.Light, size: 16))
-                    .minimumScaleFactor(0.5)
                     .multilineTextAlignment(.center)
                     .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
                 
-                /*
+                
                 Text("view.generator.info.share")
                     .frame(maxWidth: .infinity, alignment: .center)
                     .foregroundColor(Constants.Colors.Blackish)
                     .font(Font.custom(Constants.Fonts.ExtraBold, size: 16))
-                    .minimumScaleFactor(0.5)
                     .multilineTextAlignment(.center)
-                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 20))
-                */
+                    .padding(EdgeInsets(top: 10, leading: 20, bottom: 20, trailing: 20))
+                
                 
                 TextField("view.generator.input.placeholder", text: $data)
                     .font(Font.custom(Constants.Fonts.ExtraBold, size: 12))
@@ -49,6 +49,7 @@ struct GenerateView: View {
                     .padding(.horizontal)
                 
                 
+
                 Image(uiImage: self.generateQRCode(from: self.data))
                     .interpolation(.none)
                     .resizable()
@@ -56,7 +57,11 @@ struct GenerateView: View {
                     .frame(width: 200 ,height: 200)
                     .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
                     .onTapGesture {
-                        print("QR code tapped.")
+                        self.showShareSheet = true
+                        
+                }
+                .sheet(isPresented: self.$showShareSheet) {
+                    ShareSheet(photo: self.generateQRCode(from: self.data))
                 }
                 
                 
@@ -73,7 +78,11 @@ struct GenerateView: View {
         filter.setValue(data, forKey: "inputMessage")
         
         if let outputImage = filter.outputImage {
-            if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
+            
+            let transform = CGAffineTransform(scaleX: 10, y: 10)
+            let scaledQrImage = outputImage.transformed(by: transform)
+            
+            if let cgimg = context.createCGImage(scaledQrImage, from: scaledQrImage.extent) {
                 return UIImage(cgImage: cgimg)
             }
         }

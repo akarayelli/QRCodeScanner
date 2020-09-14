@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Please allow to scan code</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Please allow to save photo</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Nunito-ExtraBoldItalic.ttf</string>
