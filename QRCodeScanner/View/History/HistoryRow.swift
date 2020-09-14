@@ -40,6 +40,14 @@ struct HistoryRow: View {
                 .font(Font.custom(Constants.Fonts.Regular, size: 14))
                 .lineLimit(2)
                 .minimumScaleFactor(0.5)
+                .onTapGesture {
+                    print("Will check if data is URL")
+                    if self.scannedObject?.type == .url{
+                        if let url = URL(string: self.scannedObject!.data){
+                            UIApplication.shared.open(url)
+                        }
+                    }
+            }
             
             
             

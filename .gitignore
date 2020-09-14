@@ -1,2 +1,8 @@
 
 QRCodeScanner.xcodeproj/xcuserdata/*
+Pods/*
+QRCodeScanner.xcworkspace/xcshareddata/*
+QRCodeScanner.xcworkspace/xcuserdata/*
+Podfile.lock
+QRCodeScanner.xcodeproj/project.xcworkspace/xcuserdata/*
+QRCodeScanner.xcodeproj/project.xcworkspace/xcuserdata/akarayelli.xcuserdatad/UserInterfaceState.xcuserstate
