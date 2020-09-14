@@ -8,7 +8,10 @@
 
 //GENERAL
 "ok" = "OK";
+"no" = "No";
+"generate" = "Generate";
 "view.alert.title.success" = "Success";
+"view.alert.title.info" = "Info";
 "view.alert.msg.copy.success" = "Text copied to clipboard!";
 
 
@@ -33,6 +36,9 @@
 
 "view.generator.input.placeholder" = "Text to Generate";
 "view.generator.button.generate" ="Generate";
+"view.generator.info.clipboard.part1" ="There is already data copied to the clipboard.\n\n";
+"view.generator.info.clipboard.part2" ="\n\nDo you want to generate QR with this data?";
+
 
 
 //RECENT VIEW
