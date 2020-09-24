@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import FirebaseAnalytics
 
 struct HistoryView: View{
     
@@ -23,6 +24,8 @@ struct HistoryView: View{
         }
 
         UITableView.appearance().separatorStyle = .none
+        
+        Analytics.logEvent("History", parameters: nil)
     }
     
 

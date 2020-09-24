@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import FirebaseAnalytics
 
 struct SettingsView: View{
     
@@ -24,6 +25,9 @@ struct SettingsView: View{
             UITableView.appearance().tableFooterView = UIView()
         }
         UITableView.appearance().separatorStyle = .none
+        
+        Analytics.logEvent("Settings", parameters: nil)
+
     }
     
     var body: some View{

@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import CoreImage.CIFilterBuiltins
 import LinkPresentation
+import FirebaseAnalytics
 
 struct GenerateView: View {
     
@@ -118,6 +119,8 @@ struct GenerateView: View {
             }
         }
         
+        Analytics.logEvent("Generated", parameters: ["data": string])
+
         return UIImage(systemName: "xmark.circle") ?? UIImage()
     }
     

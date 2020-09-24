@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import FirebaseAnalytics
 
 struct ScannerResultView: View {
     
@@ -112,6 +113,8 @@ struct ScannerResultView: View {
             }
             .onAppear(){
                 
+                Analytics.logEvent("Scanned", parameters: ["data": self.scannedObject.data])
+
                 if self.scannedObject.data.isValidURL(){
                     self.showBrowseButton = true
                 }
