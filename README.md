@@ -1,2 +1,2 @@
 # QRCodeScanner
-QRCode Scanner with SwiftUI
+QR Code Reader & Generator implemented with #SwiftUI
